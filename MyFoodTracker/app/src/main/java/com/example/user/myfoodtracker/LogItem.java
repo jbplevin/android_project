@@ -3,6 +3,7 @@ package com.example.user.myfoodtracker;
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.arch.persistence.room.TypeConverter;
 
 import java.io.Serializable;
 
@@ -51,6 +52,7 @@ public class LogItem implements Serializable {
     public void setLogItemMeals(String logItemMeals) { this.logItemMeals = logItemMeals; }
     public void setLogItemDate(String logItemDate) { this.logItemDate = logItemDate; }
     public void setLogItemTime(String logItemTime) { this.logItemTime = logItemTime; }
+
 
 
 }
