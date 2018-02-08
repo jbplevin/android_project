@@ -15,18 +15,25 @@ public class LogItemTest {
 
     @Before
     public void before() {logItem = new LogItem("Monday",
-            "Breakfast: Cereal, Lunch: Sandwiches, " +
-             "Dinner: Spaghetti Bolognese, Extras: Biscuits",
-            "29/01/2018", "19:00");}
+            "29/01/2018", "19:00",
+            "Cereal","Sarnies","Pasta",
+            "Biscuits");}
 
     @Test
     public void canGetLogItemTitle(){
         assertEquals("Monday", logItem.getLogItemTitle());}
     @Test
-    public void canGetLogItemMeals(){
-        assertEquals("Breakfast: Cereal, " +
-                "Lunch: Sandwiches, Dinner: Spaghetti Bolognese," +
-                " Extras: Biscuits", logItem.getLogItemMeals());}
+    public void canGetLogItemBreakfast(){
+        assertEquals("Cereal", logItem.getLogItemBreakfast());}
+    @Test
+    public void canGetLogItemLunch(){
+        assertEquals("Sarnies", logItem.getLogItemLunch());}
+    @Test
+    public void canGetLogItemDinner(){
+        assertEquals("Pasta", logItem.getLogItemDinner());}
+    @Test
+    public void canGetLogItemExtras(){
+        assertEquals("Biscuits", logItem.getLogItemExtras());}
     @Test
     public void canGetLogItemDate(){
         assertEquals("29/01/2018", logItem.getLogItemDate());}
@@ -41,9 +48,24 @@ public class LogItemTest {
         assertEquals("Wednesday", logItem.getLogItemTitle());
     }
     @Test
-    public void canSetLogItemMeals(){
-        logItem.setLogItemMeals("Breakfast: Poptarts");
-        assertEquals("Breakfast: Poptarts", logItem.getLogItemMeals());
+    public void canSetLogItemBreakfast(){
+        logItem.setLogItemBreakfast("Poptarts");
+        assertEquals("Poptarts", logItem.getLogItemBreakfast());
+    }
+    @Test
+    public void canSetLogItemLunch(){
+        logItem.setLogItemLunch("Pasta");
+        assertEquals("Pasta", logItem.getLogItemLunch());
+    }
+    @Test
+    public void canSetLogItemDinner(){
+        logItem.setLogItemDinner("Chicken Kiev");
+        assertEquals("Chicken Kiev", logItem.getLogItemDinner());
+    }
+    @Test
+    public void canSetLogItemExtras(){
+        logItem.setLogItemExtras("Chocolate");
+        assertEquals("Chocolate", logItem.getLogItemExtras());
     }
     @Test
     public void canSetLogItemDate(){

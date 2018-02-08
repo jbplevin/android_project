@@ -13,13 +13,21 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
         <TextView
-            android:id="@+id/logDate"
+            android:id="@+id/logTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/logDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/logTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
                 <TextView
                     android:id="@+id/logBreakfast"
                     android:layout_width="wrap_content"
